@@ -1,4 +1,4 @@
-import { Counter } from './components/Counter';
+/* import { Counter } from './components/Counter';
 import { Form } from './components/Form';
 import { FormHook } from './components/FormHook';
 import { InputMsg } from './components/InputMsg';
@@ -7,11 +7,12 @@ import { Focus } from './components/Focus';
 import { Layout } from './components/Layout';
 import { CounterMemo } from './components/CounterMemo';
 import { MemoHook } from './components/MemoHook';
-import { CallbackHook } from './components/CallbackHook';
+import { CallbackHook } from './components/CallbackHook'; */
+import { TodoApp } from './components/reducer/TodoApp';
 
 export const App = () => (
   <>
-    <h1>Miscellany</h1>
+{/*     <h1>Miscellany</h1>
     <hr className="border border-primary border-1 opacity-75" />
     <Counter />
     <hr className="border border-primary border-1 opacity-75" />
@@ -29,8 +30,10 @@ export const App = () => (
     <hr className="border border-primary border-1 opacity-75" />
     <CounterMemo />
     <hr className="border border-primary border-1 opacity-75" />
-    <MemoHook/>
+    <MemoHook />
     <hr className="border border-primary border-1 opacity-75" />
     <CallbackHook />
+    <hr className="border border-primary border-1 opacity-75" /> */}
+    <TodoApp />
   </>
 );
