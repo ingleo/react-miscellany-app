@@ -2,15 +2,16 @@ import { useFetch, useCounter } from '../hooks';
 
 export const MultipleHook = () => {
   const { counter, increment, decrement } = useCounter(1, 1);
-
   const url = `https://swapi.dev/api/people/${counter}`;
   const { data, isLoading } = useFetch(url);
   const { name, height, gender } = !!data && data;
 
   return (
     <>
-      <h3>Star wars</h3>
-      <h4>Character: #{counter}</h4>
+      <h3 className="text-warning">Multiple Hooks</h3>
+      <h4>Querying Star Wars API</h4>
+      <h5>Character: #{counter}</h5>
+
       {isLoading ? (
         <div className="alert alert-info text-center">Loading...</div>
       ) : (
@@ -26,13 +27,14 @@ export const MultipleHook = () => {
           </h6>
         </div>
       )}
-      {counter > 1 ? (
-        <button className="btn btn-outline-primary" onClick={decrement}>
+
+      {counter > 1 && (
+        <button className="btn btn-outline-info btn-sm" onClick={decrement}>
           Previous
         </button>
-      ) : null}
+      )}
 
-      <button className="btn btn-outline-primary" onClick={increment}>
+      <button className="btn btn-outline-info btn-sm" onClick={increment}>
         Next
       </button>
     </>

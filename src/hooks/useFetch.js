@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 
+const localCache = {};
+
 export const useFetch = (url) => {
   const [state, setState] = useState({
     data: null,
@@ -7,11 +9,24 @@ export const useFetch = (url) => {
     hasError: null,
   });
 
+  useEffect(() => {
+    getFetch();
+  }, [url]);
+
   const getFetch = async () => {
     setState({
       ...state,
       isLoading: true,
     });
+
+    if(localCache[url]){
+      setState({
+        data: localCache[url],
+        isLoading: false,
+        hasError: null,
+      });
+      return;
+    }
 
     try {
       const resp = await fetch(url);
@@ -22,6 +37,8 @@ export const useFetch = (url) => {
         isLoading: false,
         hasError: null,
       });
+
+      localCache[url] = data;
     } catch (error) {
       setState({
         data: null,
@@ -30,10 +47,6 @@ export const useFetch = (url) => {
       });
     }
   };
-
-  useEffect(() => {
-    getFetch();
-  }, [url]);
 
   return {
     data: state.data,

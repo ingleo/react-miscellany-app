@@ -9,17 +9,25 @@ export const CounterMemo = () => {
   const { counter, increment } = useCounter(100, 2);
   return (
     <>
-      <h2>Counter with memo func </h2>
+      <h3 className="text-warning">React.memo</h3>
+      <p>
+      This is used to avoid re-rendering a specific component if its props do not change.
+      </p>
+      <h4>Counter with memo func </h4>
       <ValueMemo value={counter} />
-      <button type="button" className="btn btn-info" onClick={increment}>
+      <button
+        type="button"
+        className="btn btn-outline-info btn-sm"
+        onClick={increment}
+      >
         Add one
       </button>
       <button
         type="button"
-        className="btn btn-info"
+        className="btn btn-outline-info btn-sm"
         onClick={() => setShowMsg(!showMsg)}
       >
-        {showMsg ? 'TRUE' : 'FALSE'}
+        {showMsg ? 'True' : 'False'}
       </button>
     </>
   );

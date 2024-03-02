@@ -16,11 +16,12 @@ export const InputMsg = () => {
 
   return (
     <>
-      <h3>Form</h3>
+      <h3 className="text-warning">Event Listener</h3>
+      <h4>Form</h4>
       <input
         type="text"
         className="form-control"
-        placeholder="nickname"
+        placeholder="type admin"
         name="nickname"
         value={nickname}
         onChange={handleChange}

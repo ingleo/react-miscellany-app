@@ -8,15 +8,22 @@ export const Focus = () => {
 
   return (
     <>
-      <h3>Focus</h3>
-
+      <h3 className="text-warning">useRef</h3>
+      <p>
+        References an object that is mutable and persists throughout the
+        lifetime of the component.
+      </p>
+      <h4>Focus</h4>
       <input
         ref={inputRef}
         type="text"
         placeholder="username"
         className="form-control"
       />
-      <button className="btn btn-primary mt-2" onClick={handleClick}>
+      <button
+        className="btn btn-outline-info btn-sm mt-2"
+        onClick={handleClick}
+      >
         Set focus
       </button>
     </>

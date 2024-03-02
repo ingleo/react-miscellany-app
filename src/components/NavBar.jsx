@@ -14,7 +14,7 @@ export const NavBar = () => {
                 className={({ isActive }) =>
                   `nav-link ${isActive ? 'active' : ''}`
                 }
-                to="/several"
+                to="/"
               >
                 Several
               </NavLink>
@@ -22,15 +22,15 @@ export const NavBar = () => {
                 className={({ isActive }) =>
                   `nav-link ${isActive ? 'active' : ''}`
                 }
-                to="/reducer"
+                to="/about"
               >
-                Reducer
+                Custom
               </NavLink>
               <NavLink
                 className={({ isActive }) =>
                   `nav-link ${isActive ? 'active' : ''}`
                 }
-                to="/context"
+                to="/login"
               >
                 Context
               </NavLink>

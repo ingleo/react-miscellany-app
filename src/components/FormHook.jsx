@@ -24,7 +24,7 @@ export const FormHook = () => {
 
   return (
     <>
-      <h3>Form Hook</h3>
+      <h3 className="text-warning">Custom Form Hook</h3>
       <input
         type="text"
         className="form-control"
@@ -35,7 +35,7 @@ export const FormHook = () => {
       />
 
       <input
-        type="text"
+        type="email"
         className="form-control mt-2"
         placeholder="email"
         name="email"
@@ -44,7 +44,7 @@ export const FormHook = () => {
       />
 
       <input
-        type="text"
+        type="password"
         className="form-control mt-2"
         placeholder="password"
         name="password"
@@ -52,7 +52,10 @@ export const FormHook = () => {
         onChange={handleChange}
       />
 
-      <button className="btn btn-primary mt-2" onClick={handleReset}>
+      <button
+        className="btn btn-outline-info btn-sm mt-2"
+        onClick={handleReset}
+      >
         Reset
       </button>
     </>

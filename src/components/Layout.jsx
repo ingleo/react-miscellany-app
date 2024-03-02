@@ -12,13 +12,18 @@ export const Layout = () => {
 
   const nameRef = useRef();
   useLayoutEffect(() => {
-    const {width, height} = nameRef.current.getBoundingClientRect();
-    setBoxSize({width, height})
+    const { width, height } = nameRef.current.getBoundingClientRect();
+    setBoxSize({ width, height });
   }, [name]);
 
   return (
     <>
-      <h3>Layout effect</h3>
+      <h3 className="text-warning">useLayoutEffect</h3>
+      <p>
+        This applies an effect after a component is rendered and DOM mutations
+        have been triggered. It is synchronous, for example: adjusting the size
+        of a div.
+      </p>
 
       <div style={{ display: 'flex' }}>
         <p ref={nameRef}>
@@ -26,16 +31,16 @@ export const Layout = () => {
         </p>
       </div>
 
-      <code>{JSON.stringify(boxSixe)}</code>
-      <br/>
+      <code className='text-light'>{JSON.stringify(boxSixe)}</code>
+      <br />
 
-      {counter > 1 ? (
-        <button className="btn btn-outline-primary mt-2" onClick={decrement}>
+      {counter > 1 && (
+        <button className="btn btn-outline-info btn-sm mt-2" onClick={decrement}>
           Previous
         </button>
-      ) : null}
+      )}
 
-      <button className="btn btn-outline-primary mt-2" onClick={increment}>
+      <button className="btn btn-outline-info btn-sm mt-2" onClick={increment}>
         Next
       </button>
     </>

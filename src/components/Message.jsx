@@ -9,8 +9,9 @@ export const Message = () => {
     };
 
     window.addEventListener('mousemove', onMouseMove);
-
+    console.log('addEventListener');
     return () => {
+        console.log('removeEventListener');
       window.removeEventListener('mousemove', onMouseMove);
     };
   }, []);
@@ -18,7 +19,7 @@ export const Message = () => {
   return (
     <>
       <span className="badge text-bg-warning">Nick not allowed</span>
-      <span className="badge text-bg-warning">An event has been triggered</span>
+      <span className="badge text-bg-info">An event has been triggered</span>
       <span className="badge text-bg-warning">{JSON.stringify(coords)}</span>
     </>
   );
