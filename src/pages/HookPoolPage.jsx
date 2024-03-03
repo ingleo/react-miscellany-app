@@ -15,7 +15,7 @@ import {
 } from '../components';
 
 export const HookPoolPage = () => {
-  const [activeExample, setActiveExample] = useState('counter');
+  const [activeExample, setActiveExample] = useState('customHook');
 
   let hookExample = <></>;
   switch (activeExample) {

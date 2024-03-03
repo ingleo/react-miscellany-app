@@ -1,8 +1,8 @@
-import { TodoList } from './TodoList';
-import { TodoForm } from './TodoForm';
-import { useTodo } from '../../hooks/useTodo';
+import { TodoList } from '../components/reducer/TodoList';
+import { TodoForm } from '../components/reducer/TodoForm';
+import { useTodo } from '../hooks/useTodo';
 
-export const TodoApp = () => {
+export const ToDoPage = () => {
   const {
     todoListState,
     handleAddTask,
@@ -14,10 +14,10 @@ export const TodoApp = () => {
 
   return (
     <>
-      <h3>
-        ToDoList: {allTasks} - <small>Pending: {pendingTasks}</small>
-      </h3>
-      <hr />
+      <h4>
+        <span className="text-warning">useReducer&nbsp;</span> ToDo List: {allTasks} -{' '}
+        <small>Pending: {pendingTasks}</small>
+      </h4>
       <div className="row">
         <div className="col-7">
           <TodoList
@@ -28,8 +28,7 @@ export const TodoApp = () => {
         </div>
 
         <div className="col-5">
-          <h2>Add task</h2>
-          <hr />
+          <h4>Add task</h4>
           <TodoForm onNewTask={handleAddTask} />
         </div>
       </div>

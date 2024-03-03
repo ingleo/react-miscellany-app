@@ -33,7 +33,7 @@ export const TodoForm = ({ onNewTask }) => {
         value={description}
         onChange={handleChange}
       />
-      <button type="submit" className="btn btn-outline-primary btn-sm mt-2">
+      <button type="submit" className="btn btn-outline-info btn-sm mt-2">
         Add
       </button>
     </form>

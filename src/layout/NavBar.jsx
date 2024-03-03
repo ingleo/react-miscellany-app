@@ -14,7 +14,7 @@ export const NavBar = () => {
                 className={({ isActive }) =>
                   `nav-link ${isActive ? 'active' : ''}`
                 }
-                to="/several"
+                to="/"
               >
                 Several
               </NavLink>
@@ -24,15 +24,24 @@ export const NavBar = () => {
                 }
                 to="/reducer"
               >
-                Reducer
+                useReducer
+              </NavLink >
+              <span className='nav-link'> || </span>
+              <NavLink
+                className={({ isActive }) =>
+                  `nav-link ${isActive ? 'active' : ''}`
+                }
+                to="/context-one"
+              >
+                useContext 1
               </NavLink>
               <NavLink
                 className={({ isActive }) =>
                   `nav-link ${isActive ? 'active' : ''}`
                 }
-                to="/context"
+                to="/context-two"
               >
-                Context
+                useContext 2
               </NavLink>
             </div>
           </div>

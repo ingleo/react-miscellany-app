@@ -37,7 +37,6 @@ export const useTodo = () => {
   };
 
   const handleToggleTask = (taskId) => {
-    console.log(taskId);
     const toggleAction = {
       type: 'TOGGLE_TASK',
       payload: taskId,
