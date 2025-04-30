@@ -10,8 +10,9 @@ export const Message = () => {
 
     window.addEventListener('mousemove', onMouseMove);
     console.log('addEventListener');
+
     return () => {
-        console.log('removeEventListener');
+      console.log('removeEventListener');
       window.removeEventListener('mousemove', onMouseMove);
     };
   }, []);

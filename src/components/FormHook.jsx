@@ -23,7 +23,7 @@ export const FormHook = () => {
   }, [email]);
 
   return (
-    <>
+    <form>
       <h3 className="text-warning">Custom Form Hook</h3>
       <input
         type="text"
@@ -39,6 +39,7 @@ export const FormHook = () => {
         className="form-control mt-2"
         placeholder="email"
         name="email"
+        autoComplete="username"
         value={email}
         onChange={handleChange}
       />
@@ -48,16 +49,20 @@ export const FormHook = () => {
         className="form-control mt-2"
         placeholder="password"
         name="password"
+        autoComplete="current-password"
         value={password}
         onChange={handleChange}
       />
 
       <button
         className="btn btn-outline-info btn-sm mt-2"
-        onClick={handleReset}
+        onClick={(event) => {
+          event.preventDefault();
+          handleReset();
+        }}
       >
         Reset
       </button>
-    </>
+    </form>
   );
 };

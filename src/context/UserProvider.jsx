@@ -1,8 +1,9 @@
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 
 import { UserContext } from './UserContext';
-import { useState } from 'react';
+
 
 export const UserProvider = ({ children }) => {
   const [activeUser, setActiveUser] = useState();

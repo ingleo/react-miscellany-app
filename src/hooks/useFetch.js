@@ -19,7 +19,7 @@ export const useFetch = (url) => {
       isLoading: true,
     });
 
-    if(localCache[url]){
+    if (localCache[url]) {
       setState({
         data: localCache[url],
         isLoading: false,
@@ -31,7 +31,6 @@ export const useFetch = (url) => {
     try {
       const resp = await fetch(url);
       const data = await resp.json();
-
       setState({
         data,
         isLoading: false,
@@ -40,6 +39,7 @@ export const useFetch = (url) => {
 
       localCache[url] = data;
     } catch (error) {
+      console.error(`error: ${error.message}`);
       setState({
         data: null,
         isLoading: false,

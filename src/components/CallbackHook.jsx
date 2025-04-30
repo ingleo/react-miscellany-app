@@ -13,8 +13,8 @@ export const CallbackHook = () => {
     <>
       <h3 className="text-warning">useCallback</h3>
       <p>
-        This memoizes a function and will recompute it when one of the
-        dependencies changes.
+        This memoizes a function and will recompute it when one of the inputs
+        changes.
       </p>
       <h4>Callback counter {counter}</h4>
       <ShowIncrement onIncrement={handleIncrement} />

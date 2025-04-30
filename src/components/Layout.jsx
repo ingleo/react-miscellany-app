@@ -6,7 +6,7 @@ export const Layout = () => {
 
   const { counter, increment, decrement } = useCounter(1, 1);
 
-  const url = `https://swapi.dev/api/people/${counter}`;
+  const url = `https://pokeapi.co/api/v2/pokemon/${counter}`;
   const { data } = useFetch(url);
   const { name } = !!data && data;
 

@@ -10,7 +10,7 @@ export const ContextOnePage = () => {
   return (
     <>
       <h4 className="text-warning">useContext</h4>
-      <p>This page is calling a provider to pass props between its children.</p>
+      <p>This page is calling a provider for passing props between its children.</p>
       <code className="text-info">
         A property called from a provider function:
       </code>

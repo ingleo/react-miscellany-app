@@ -6,7 +6,7 @@ export const ContextTwoPage = () => {
   return (
     <>
       <h4 className="text-warning">useContext</h4>
-      <p>This page is calling a provider to pass props between its children.</p>
+      <p>This page is calling a provider for passing props between its children.</p>
 
       {activeUser ? (
         <div>
